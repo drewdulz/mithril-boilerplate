@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>Test Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link href="global/lib/jquery-ui.css" rel="stylesheet">
+		<link href="global/lib/bootstrap.css" rel="stylesheet">
+		<link href="global/lib/font-awesome.min.css" rel="stylesheet">
+		<link href="global/lib/glyphicons.css" rel="stylesheet">
+		<link href="global/lib/glyphicons-social.css" rel="stylesheet">
+
+		<!-- Custom Styling -->
+		<link href="module.css" rel="stylesheet">
+
+		<!-- script files -->
+		<script src="global/lib/jquery.js"></script>
+		<script src="global/lib/jquery-ui.js"></script>
+		<script src="global/lib/bootstrap.js"></script>
+		<script src="global/lib/moment.min.js"></script>
+		<script src="global/lib/underscore.js"></script>
+		<!-- Required for layout backend -->
+		<script src="global/lib/mithril.js"></script>
+		<script src="global/lib/util.js"></script>
+		<script src="global/lib/model.js"></script>
+	
+		<script>$j = jQuery.noConflict();</script>
+		
+		<script src="myModule.js"></script>
+		<script src="someModule.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// Define the module
+			m.module(document.body, myModule);
+
+			// Defining the routes
+			m.route(document.body, "/", {
+				"/": myModule,
+				"/someModule" : someModule
+			});
+		</script>
+	</body>
+</html>
