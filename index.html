@@ -14,29 +14,32 @@
 		<link href="module.css" rel="stylesheet">
 
 		<!-- script files -->
-		<script src="global/lib/jquery.js"></script>
+		<script src="global/lib/jquery.min.js"></script>
 		<script src="global/lib/jquery-ui.js"></script>
 		<script src="global/lib/bootstrap.js"></script>
-		<script src="global/lib/moment.min.js"></script>
+		<!--<script src="global/lib/moment.min.js"></script>-->
 		<script src="global/lib/underscore.js"></script>
 		<!-- Required for layout backend -->
 		<script src="global/lib/mithril.js"></script>
 		<script src="global/lib/util.js"></script>
 		<script src="global/lib/model.js"></script>
+
+		<!-- Firebase CDN -->
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 	
 		<script>$j = jQuery.noConflict();</script>
 		
-		<script src="myModule.js"></script>
+		<script src="patients.js"></script>
 		<script src="someModule.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
 			// Define the module
-			m.module(document.body, myModule);
+			m.module(document.body, patients);
 
 			// Defining the routes
 			m.route(document.body, "/", {
-				"/": myModule,
+				"/": patients,
 				"/someModule" : someModule
 			});
 		</script>
